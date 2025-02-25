@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMORA</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        berkshire: ["Berkshire Swash", "cursive"],
+                    },
+                },
+            },
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+</head>
+<body class="bg-black text-white font-berkshire">
+    <!-- navbar -->
+    <nav class="fixed top-0 w-full flex justify-between items-center px-8 py-4 bg-black bg-opacity-50 text-white shadow-lg z-50">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+            <img src="images/Gold_Luxury_Initial_Logo-removebg-preview.png" alt="Lumora Logo" class="h-16 w-auto">
+            <span class="text-2xl font-berkshire">Lumora</span>
+        </div>
+
+        <!-- navliks -->
+        <ul class="hidden md:flex space-x-6 text-lg">
+            <li><a href="#hero" class="hover:text-gray-400 transition">Home</a></li>
+            <li><a href="#timeline" class="hover:text-gray-400 transition">Timeline</a></li>
+            <li><a href="#submit" class="hover:text-gray-400 transition">Submit</a></li>
+            <li><a href="#contact" class="hover:text-gray-400 transition">Contact</a></li>
+        </ul>
+
+        <!-- mobilemenuicon -->
+        <button id="menuToggle" class="md:hidden text-white text-3xl">&#9776;</button>
+    </nav>
+
+    <!-- herosection -->
+<section id="hero" class="h-screen relative overflow-hidden flex items-center justify-center text-center">
+    <!-- Persistent Hero Text -->
+    <div class="absolute z-10">
+        <h1 class="text-7xl drop-shadow-lg">Lumora Memoria</h1>
+    </div>
+
+    <!-- hero image carousel -->
+    <div class="carousel relative w-full h-full">
+        <div class="carousel-inner absolute w-full h-full">
+            <img src="images/niion.jpg" class="carousel-item absolute w-full h-full object-cover opacity-0 transition-opacity duration-1000">
+            <img src="images/nino.jpg" class="carousel-item absolute w-full h-full object-cover opacity-0 transition-opacity duration-1000">
+          </div>
+    </div>
+</section>
+
+    <script src="script.js"></script>
+</body>
+</html>
