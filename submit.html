@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMORA</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        berkshire: ["Berkshire Swash", "cursive"],
+                    },
+                },
+            },
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+</head>
+<body class="bg-black text-white font-berkshire">
+    <!-- navbar -->
+    <nav class="fixed top-0 w-full flex justify-between items-center px-8 py-4 bg-black bg-opacity-50 text-white shadow-lg z-50">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+            <img src="images/Gold_Luxury_Initial_Logo-removebg-preview.png" alt="Lumora Logo" class="h-16 w-auto">
+            <span class="text-2xl font-berkshire">Lumora</span>
+        </div>
+
+        <!-- navliks -->
+        <ul class="hidden md:flex space-x-6 text-lg">
+            <li><a href="index.html" class="hover:text-gray-400 transition">Home</a></li>
+            <li><a href="timeline.html" class="hover:text-gray-400 transition">Timeline</a></li>
+            <li><a href="events.html" class="hover:text-gray-400 transition">Events</a></li>
+            <li><a href="leaderboard.html" class="hover:text-gray-400 transition">Leaderboard</a></li>
+            <li><a href="submit.html" class="hover:text-gray-400 transition">Submit</a></li>
+            <li><a href="contact.html" class="hover:text-gray-400 transition">Contact Us</a></li>
+        </ul>
+
+        <!-- mobilemenuicon -->
+        <button id="menuToggle" class="md:hidden text-white text-3xl">&#9776;</button>
+    </nav>
+
+<section id="submit" class="relative py-16 bg-black text-white">
+    <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-5xl mt-20 mb-6">Submit Your Story</h2><hr>
+        <p class="text-lg text-white mb-8">
+            Share your journey, your inspirations, and your work with the world. Submit your photography and let your story be heard.
+        </p>
+
+        <form action="#" method="POST" class="bg-white p-8 rounded-lg shadow-lg">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label for="name" class="block text-black text-lg mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" class="w-full px-4 py-3 bg-white text-white border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500">
+                </div>
+
+                <div>
+                    <label for="email" class="block text-black text-lg mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" class="w-full px-4 py-3 bg-white text-white border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500">
+                </div>
+            </div>
+
+            <div class="mt-6">
+                <label for="story" class="block text-black text-lg mb-2">Your Story</label>
+                <textarea id="story" name="story" rows="5" class="w-full px-4 py-3 white text-white border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500"></textarea>
+            </div>
+
+            <div class="mt-6">
+                <label for="photo" class="block text-black text-lg mb-2">Upload Portfolio</label>
+                <input type="file" id="photo" name="photo" class="w-full px-4 py-3 bg-white text-white border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500">
+            </div>
+
+            <button type="submit" class="mt-6 px-6 py-3 bg-black text-white rounded-lg shadow-lg hover:bg-gray-900 transition">
+                Submit 
+            </button>
+        </form>
+    </div>
+</section>

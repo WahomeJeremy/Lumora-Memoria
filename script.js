@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    // fadein animations on scroll
     $(window).on("scroll", function() {
         $("section").each(function() {
             var position = $(this).offset().top;
@@ -11,7 +10,7 @@ $(document).ready(function() {
         });
     });
 
-    // hero image carousel
+    // hero carousel
     let index = 0;
     function showSlide() {
         let slides = $(".carousel-item");
@@ -22,8 +21,21 @@ $(document).ready(function() {
     showSlide();
     setInterval(showSlide, 3000);
 
-    // mobile menu icon 
     $("#menuToggle").click(function() {
         $("ul").toggleClass("hidden");
+    });
+});
+
+$(document).ready(function() {
+    $("#gallery-text").animate({
+        opacity: 1,
+        translateY: 0
+    }, 1000);
+
+    $("#gallery-images img").each(function(index) {
+        $(this).delay(500 * index).animate({
+            opacity: 1,
+            translateY: 0
+        }, 1000);
     });
 });

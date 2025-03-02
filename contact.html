@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMORA</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        berkshire: ["Berkshire Swash", "cursive"],
+                    },
+                },
+            },
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+</head>
+<body class="bg-black text-white font-berkshire">
+    <!-- navbar -->
+    <nav class="fixed top-0 w-full flex justify-between items-center px-8 py-4 bg-black bg-opacity-50 text-white shadow-lg z-50">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+            <img src="images/Gold_Luxury_Initial_Logo-removebg-preview.png" alt="Lumora Logo" class="h-16 w-auto">
+            <span class="text-2xl font-berkshire">Lumora</span>
+        </div>
+
+        <!-- navliks -->
+        <ul class="hidden md:flex space-x-6 text-lg">
+            <li><a href="index.html" class="hover:text-gray-400 transition">Home</a></li>
+            <li><a href="timeline.html" class="hover:text-gray-400 transition">Timeline</a></li>
+            <li><a href="events.html" class="hover:text-gray-400 transition">Events</a></li>
+            <li><a href="leaderboard.html" class="hover:text-gray-400 transition">Leaderboard</a></li>
+            <li><a href="submit.html" class="hover:text-gray-400 transition">Submit</a></li>
+            <li><a href="contact.html" class="hover:text-gray-400 transition">Contact Us</a></li>
+        </ul>
+
+        <!-- mobilemenuicon -->
+        <button id="menuToggle" class="md:hidden text-white text-3xl">&#9776;</button>
+    </nav>
+</head>
+<body class="bg-white text-black min-h-screen flex items-center justify-center">
+    <div class="container mx-auto px-6 py-12 text-center">
+        <h1 class="text-5xl font-bold mt-20 mb-5 ">Contact Us</h1><hr>
+        <p class="text-lg text-white mt-10 mb-6">We’d love to hear from you! Reach out with any questions, collaborations, or inquiries.</p>
+
+        <div class="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-lg border border-gray-700">
+            <form action="#" method="POST" class="space-y-6">
+                <div>
+                    <label class="block text-lg text-black ">Full Name</label>
+                    <input type="text" name="name" class="w-full p-3 text-black border border-black rounded-md" placeholder="Your Name" required>
+                </div>
+                <div>
+                    <label class="block text-lg  text-black mb-2">Email Address</label>
+                    <input type="email" name="email" class="w-full p-3 text-black border border-black rounded-md" placeholder="Your Email" required>
+                </div>
+                <div>
+                    <label class="block text-lg text-black mb-2">Message</label>
+                    <textarea name="message" class="w-full p-3 text-black border border-black rounded-md" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="w-full bg-white text-black py-3 border border-black rounded-lg font-bold hover:bg-gray-300 transition">Send Message</button>
+            </form>
+            <div class="mt-10 text-lg text-black">
+                <p>Email: <a href="mailto:lumora@info.com" class="text-black hover:text-sky-900">lummora@info.com</a></p>
+                <p>Phone: <a href="tel:+254706298128" class="text-black hover:text-sky-900">+123 456 789</a></p>
+                <p>Location: Nairobi, Kenya</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

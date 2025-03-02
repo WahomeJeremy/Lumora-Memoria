@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard | Lumora</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        berkshire: ["Berkshire Swash", "cursive"],
+                    },
+                },
+            },
+        };
+    </script>
+    <script>
+        $(document).ready(function() {
+            $(".leaderboard-container").hide().fadeIn(2000);
+            
+            $("tbody tr").hover(
+                function() {
+                    $(this).css({ transform: "scale(1.05)", transition: "transform 0.3s ease-in-out" });
+                },
+                function() {
+                    $(this).css({ transform: "scale(1)", transition: "transform 0.3s ease-in-out" });
+                }
+            );
+            
+            $("tbody tr:first-child").css({
+                animation: "pulse 1.5s infinite",
+            });
+        });
+    </script>
+    <style>
+        @keyframes pulse {
+            0% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
+            50% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); }
+            100% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
+        }
+    </style>
+</head>
+<body class="bg-black text-white font-berkshire">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full flex justify-between items-center px-8 py-4 bg-black text-white shadow-lg z-50">
+        <div class="flex items-center space-x-3">
+            <img src="images/Gold_Luxury_Initial_Logo-removebg-preview.png" alt="Lumora Logo" class="h-16 w-auto">
+            <span class="text-2xl">Lumora</span>
+        </div>
+        <ul class="hidden md:flex space-x-6 text-lg">
+            <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+            <li><a href="timeline.html" class="hover:text-white transition">Timeline</a></li>
+            <li><a href="events.html" class="hover:text-white transition">Events</a></li>
+            <li><a href="leaderboard.html" class="hover:text-white transition">Leaderboard</a></li>
+            <li><a href="submit.html" class="hover:text-white transition">Submit</a></li>
+            <li><a href="contact.html" class="hover:text-white transition">Contact Us</a></li>
+        </ul>
+        <button id="menuToggle" class="md:hidden text-white text-3xl">&#9776;</button>
+    </nav>
+    
+    <!-- Leaderboard -->
+    <section class="leaderboard-container max-w-5xl w-9/10 mx-auto my-20 p-6 bg-black rounded-lg shadow-lg">
+        <h1 class="text-4xl text-center font-bold mb-6">Leaderboard</h1>
+        <table class="w-full text-left border-collapse">
+            <thead>
+                <tr class="bg-black text-white uppercase text-sm border-b border-white">
+                    <th class="py-3 px-4 border-r border-white">Rank</th>
+                    <th class="py-3 px-4 border-r border-white">Name</th>
+                    <th class="py-3 px-4">Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="hover:bg-white hover:text-black transition border-b border-white">
+                    <td class="py-3 px-4 border-r border-white">1</td>
+                    <td class="py-3 px-4 border-r border-white">Timba Vuyanzi</td>
+                    <td class="py-3 px-4">100</td>
+                </tr>
+                <tr class="hover:bg-white hover:text-black transition border-b border-white">
+                    <td class="py-3 px-4 border-r border-white">2</td>
+                    <td class="py-3 px-4 border-r border-white">Malik Deng</td>
+                    <td class="py-3 px-4">90</td>
+                </tr>
+                <tr class="hover:bg-white hover:text-black transition border-b border-white">
+                    <td class="py-3 px-4 border-r border-white">3</td>
+                    <td class="py-3 px-4 border-r border-white">Rooney McGregor</td>
+                    <td class="py-3 px-4">80</td>
+                </tr>
+                <tr class="hover:bg-white hover:text-black transition border-b border-white">
+                    <td class="py-3 px-4 border-r border-white">4</td>
+                    <td class="py-3 px-4 border-r border-white">David Beckham</td>
+                    <td class="py-3 px-4">77</td>
+                </tr>
+                <tr class="hover:bg-white hover:text-black transition border-b border-white">
+                    <td class="py-3 px-4 border-r border-white">5</td>
+                    <td class="py-3 px-4 border-r border-white">Jalissa Ashley</td>
+                    <td class="py-3 px-4">76</td>
+                </tr>
+                <tr class="hover:bg-white hover:text-black transition">
+                    <td class="py-3 px-4 border-r border-white">6</td>
+                    <td class="py-3 px-4 border-r border-white">Bailey Simons</td>
+                    <td class="py-3 px-4">70</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>

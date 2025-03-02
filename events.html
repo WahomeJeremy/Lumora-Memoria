@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMORA</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        berkshire: ["Berkshire Swash", "cursive"],
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+</head>
+<body class="bg-black text-white font-berkshire">
+    <!-- navbar -->
+    <nav class="fixed top-0 w-full flex justify-between items-center px-8 py-4 bg-black bg-opacity-50 text-white shadow-lg z-50">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+            <img src="images/Gold_Luxury_Initial_Logo-removebg-preview.png" alt="Lumora Logo" class="h-16 w-auto">
+            <span class="text-2xl font-berkshire">Lumora</span>
+        </div>
+
+        <!-- navliks -->
+        <ul class="hidden md:flex space-x-6 text-lg">
+            <li><a href="index.html" class="hover:text-gray-400 transition">Home</a></li>
+            <li><a href="timeline.html" class="hover:text-gray-400 transition">Timeline</a></li>
+            <li><a href="events.html" class="hover:text-gray-400 transition">Events</a></li>
+            <li><a href="leaderboard.html" class="hover:text-gray-400 transition">Leaderboard</a></li>
+            <li><a href="submit.html" class="hover:text-gray-400 transition">Submit</a></li>
+            <li><a href="contact.html" class="hover:text-gray-400 transition">Contact Us</a></li>
+        </ul>
+
+        <!-- mobilemenuicon -->
+        <button id="menuToggle" class="md:hidden text-white text-3xl">&#9776;</button>
+    </nav>
+</head>
+<body class="bg-black text-white flex items-center justify-center min-h-screen">
+    <div class="container mx-auto py-12 px-6 text-center">
+        <h1 class="text-5xl font-bold mt-40 mb-5 tracking-wide">Upcoming Events</h1><hr>
+        
+
+        <!-- Event List -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center mt-10">
+            <div class="bg-black p-6 rounded-xl shadow-lg border border-gray-700 hover:scale-105 transition transform duration-300 w-80 fade-target">
+                <img src="images/conttest.png" alt="Event Image" class="w-full h-48 object-cover rounded-md mb-4">
+                <h2 class="text-3xl font-semibold mb-2">Photography Contest</h2>
+                <p class="text-gray-400 text-sm mb-4">March 15, 2025 | Nairobi, Kenya</p>
+                <p class="mb-6">Join top photographers in an interactive session covering composition, lighting, and storytelling.</p>
+                <button data-event="Photography Contest" class="get-ticket-btn w-full bg-white text-black py-2 rounded-lg font-bold hover:bg-gray-300 transition">Get Ticket</button>
+            </div>
+        
+            <div class="bg-black p-6 rounded-xl shadow-lg border border-gray-700 hover:scale-105 transition transform duration-300 w-80 fade-target">
+                <img src="images/flyer.png" alt="Event Image" class="w-full h-48 object-cover rounded-md mb-4">
+                <h2 class="text-3xl font-semibold mb-2">Street Photography Walk</h2>
+                <p class="text-gray-400 text-sm mb-4">April 5, 2025 | Lagos, Nigeria</p>
+                <p class="mb-6">Explore urban landscapes with a group of passionate photographers.</p>
+                <button data-event="Street Photography Walk" class="get-ticket-btn w-full bg-white text-black py-2 rounded-lg font-bold hover:bg-gray-300 transition">Get Ticket</button>
+            </div>
+        
+            <div class="bg-black p-6 rounded-xl shadow-lg border border-gray-700 hover:scale-105 transition transform duration-300 w-80 fade-target">
+                <img src="images/Screenshot 2025-02-25 214457.png" alt="Event Image" class="w-full h-48 object-cover rounded-md mb-4">
+                <h2 class="text-3xl font-semibold mb-2">Night Sky Photography</h2>
+                <p class="text-gray-400 text-sm mb-4">May 20, 2025 | Cape Town, South Africa</p>
+                <p class="mb-6">Capture breathtaking shots of the night sky with expert guidance.</p>
+                <button data-event="Night Sky Photography" class="get-ticket-btn w-full bg-white text-black py-2 rounded-lg font-bold hover:bg-gray-300 transition">Get Ticket</button>
+            </div>
+        </div>
+    </div>
+    <script src="events.js"></script>
+
+</body>
+</html>

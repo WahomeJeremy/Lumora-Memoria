@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMORA</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+      <link rel="stylesheet" href="timeline.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        berkshire: ["Berkshire Swash", "cursive"],
+                    },
+                },
+            },
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+</head>
+<body class="bg-black text-white font-berkshire">
+    <!-- navbar -->
+    <nav class="fixed top-0 w-full flex justify-between items-center px-8 py-4 bg-black bg-opacity-50 text-white shadow-lg z-50">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+            <img src="images/Gold_Luxury_Initial_Logo-removebg-preview.png" alt="Lumora Logo" class="h-16 w-auto">
+            <span class="text-2xl font-berkshire">Lumora</span>
+        </div>
+
+        <!-- navliks -->
+        <ul class="hidden md:flex space-x-6 text-lg">
+            <li><a href="index.html" class="hover:text-gray-400 transition">Home</a></li>
+            <li><a href="timeline.html" class="hover:text-gray-400 transition">Timeline</a></li>
+            <li><a href="events.html" class="hover:text-gray-400 transition">Events</a></li>
+            <li><a href="leaderboard.html" class="hover:text-gray-400 transition">Leaderboard</a></li>
+            <li><a href="submit.html" class="hover:text-gray-400 transition">Submit</a></li>
+            <li><a href="contact.html" class="hover:text-gray-400 transition">Contact Us</a></li>
+        </ul>
+
+        <!-- mobilemenuicon -->
+        <button id="menuToggle" class="md:hidden text-white text-3xl">&#9776;</button>
+    </nav>
+</head>
+<body>
+    <script>    
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+        </script>
+
+    <section  class="bg-black text-white">
+    <!-- profile  -->
+    <section class="relative w-full h-screen flex items-center justify-center bg-black fade-in">
+        <div class="grid grid-cols-2 gap-2 w-3/4">
+            <img src="images\nino.jpg" class="w-full h-auto rounded-lg shadow-lg fade-in-left" alt="Hero Image Left">
+            <img src="images\nino.jpg" class="w-full h-auto rounded-lg shadow-lg fade-in-right" alt="Hero Image Right">
+        </div>
+        <div class="absolute bottom-10 text-center">
+            <h1 class="text-4xl tracking-wide fade-in">DIRECTOR OF PHOTOGRAPHY</h1><hr>
+        </div>
+    </section>
+
+    <!-- About  -->
+    <section class="max-w-6xl mx-auto py-16 px-6 fade-in">
+        <h2 class="text-2xl  mb-6 fade-in">Nino Michel (Switzerland)</h2><hr>
+        <div class="grid grid-cols-3 gap-4">
+            <div class="col-span-1">
+                <p class="text-lg text-white fade-in">
+                    Hailing from Monte, a small village in the Italian-speaking region of Switzerland, Nino Michel’s passion for visual storytelling led him to pursue a career in cinematography. At 17, he moved to Bern, where he completed his education before immersing himself in the film industry. Michel gained experience working as a camera assistant, electrician, and visual effects artist. In 2015, he began formal studies in film at the Zurich University of the Arts, focusing on cinematography. Since obtaining his Bachelor of Arts in Film in 2020, Michel has worked as a freelance cameraman, electrician, and colorist, contributing to various projects, including short films, commercials, and music videos. His dedication to his craft and continuous pursuit of excellence have established him as a notable figure in the Swiss film industry.                </p>
+            </div>
+            <div class="col-span-2 grid grid-cols-3 gap-2">
+                <img src="images\noninin.jpg" class="w-full rounded-lg shadow-lg fade-in" alt="About Image 1">
+                <img src="images\noniii.jpg" class="w-full rounded-lg shadow-lg fade-in" alt="About Image 2">
+                <img src="images\noni.jpg" class="w-full rounded-lg shadow-lg fade-in" alt="About Image 3">
+                <img src="images\nnnino.jpg" class="w-full rounded-lg shadow-lg fade-in" alt="About Image 4">
+                <img src="images\nnin.jpg" class="w-full rounded-lg shadow-lg fade-in" alt="About Image 5">
+                <img src="images\niioo.jpg" class="w-full rounded-lg shadow-lg fade-in" alt="About Image 6">
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto py-16 px-6 fade-in">
+        <div class="grid grid-cols-3 gap-4">
+            <div class="fade-in">
+                <img src="images\niii.jpg" class="w-full rounded-lg shadow-lg hover:scale-105 transition-all duration-300" alt="Portfolio Image">
+            </div>
+            <div class="fade-in">
+                <img src="images\niion.jpg" class="w-full rounded-lg shadow-lg hover:scale-105 transition-all duration-300" alt="Portfolio Image">
+            </div>
+            <div class="fade-in">
+                <img src="images\ninooo.jpg" class="w-full rounded-lg shadow-lg hover:scale-105 transition-all duration-300" alt="Portfolio Image">
+            </div>
+        </div>
+    </section> 
+</section>   
+
+<section  class="bg-black text-white">
+    <!-- profile -->
+    <section class="relative w-full h-screen flex items-center justify-center bg-black fade-in">
+        <div class="grid grid-cols-2 gap-2 w-3/4">
+            <img src="images\IMG_4768.PNG" class="w-full h-auto rounded-lg shadow-lg fade-in-left" alt="Hero Image Left">
+            <img src="images\IMG_4768.PNG" class="w-full h-auto rounded-lg shadow-lg fade-in-right" alt="Hero Image Right">
+        </div>
+        <div class="absolute bottom-10 text-center">
+            <h1 class="text-4xl tracking-wide fade-in">Portrait Photographer </h1><hr>
+        </div>
+    </section>
+
+    <!-- About  -->
+    <section class="max-w-6xl mx-auto py-16 px-6 fade-in">
+        <h2 class="text-2xl  mb-6 fade-in">Emmanuel Jambo (South Sudan)</h2><hr>
+        <div class="grid grid-cols-3 gap-4">
+            <div class="col-span-1">
+                <p class="text-lg text-white fade-in">
+                    Born in Khartoum, Sudan, Emmanuel Jambo’s journey into photography was serendipitous. Initially aspiring to a career in basketball, a knee injury in college halted his athletic dreams. During a visit to his sister in Kenya in 2008, Jambo’s burgeoning interest in photography led him to opportunities that would redefine his path. His talent quickly garnered attention, leading to collaborations with prominent figures, including capturing official portraits of Kenyan President Uhuru Kenyatta and President William Ruto. In 2012, Forbes Magazine recognized him as one of the most influential photographers in Africa. Jambo’s work is celebrated for its depth and ability to convey the essence of his subjects, reflecting his resilience and adaptability.                </p>
+            </div>
+            <div class="col-span-2 grid grid-cols-3 gap-2">
+                <img src="images\jjam'.jpg" class="w-full rounded-lg shadow-lg fade-in" alt="About Image 1">
+                <img src="images\jjjmb.jpg" class="w-full rounded-lg shadow-lg fade-in" alt="About Image 2">
+                <img src="images\jjmmbbn.jpg" class="w-full rounded-lg shadow-lg fade-in" alt="About Image 3">
+                <img src="images\jjmmnb.jpg" class="w-full rounded-lg shadow-lg fade-in" alt="About Image 4">
+                <img src="images\jjmnb.jpg" class="w-full rounded-lg shadow-lg fade-in" alt="About Image 5">
+                <img src="images\jmb.jpg" class="w-full rounded-lg shadow-lg fade-in" alt="About Image 6">
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="max-w-6xl mx-auto py-16 px-6 fade-in">
+        <div class="grid grid-cols-3 gap-4">
+            <div class="fade-in">
+                <img src="images\jjmmbbn.jpg" class="w-full rounded-lg shadow-lg hover:scale-105 transition-all duration-300" alt="Portfolio Image">
+            </div>
+            <div class="fade-in">
+                <img src="images\jmn.jpg" class="w-full rounded-lg shadow-lg hover:scale-105 transition-all duration-300" alt="Portfolio Image">
+            </div>
+            <div class="fade-in">
+                <img src="images\lmlmlml.jpg" class="w-full rounded-lg shadow-lg hover:scale-105 transition-all duration-300" alt="Portfolio Image">
+            </div>
+        </div>
+    </section> 
+</section>
+<section  class="bg-black text-white">
+    <!-- profile -->
+    <section class="relative w-full h-screen flex items-center justify-center bg-black fade-in">
+        <div class="grid grid-cols-2 gap-2 w-3/4">
+            <img src="images\hhnhhh.jpg" class="w-full h-auto rounded-lg shadow-lg fade-in-left" alt="Hero Image Left">
+            <img src="images\hhnhhh.jpg" class="w-full h-auto rounded-lg shadow-lg fade-in-right" alt="Hero Image Right">
+        </div>
+        <div class="absolute bottom-10 text-center">
+            <h1 class="text-4xl tracking-wide fade-in">Photojournalist</h1><hr>
+        </div>
+    </section>
+
+    <!-- About  -->
+    <section class="max-w-6xl mx-auto py-16 px-6 fade-in">
+        <h2 class="text-2xl  mb-6 fade-in">Ernest Cole (South Africa)</h2><hr>
+        <div class="grid grid-cols-3 gap-4">
+            <div class="col-span-1">
+                <p class="text-lg text-white fade-in">
+                    Ernest Cole was a South African photographer renowned for his courageous documentation of life under apartheid. Born in 1940 in a racially segregated society, Cole faced immense challenges due to systemic oppression. Despite these obstacles, he clandestinely captured the harsh realities of apartheid, often at great personal risk. His seminal work, “House of Bondage,” published in 1967, offered a stark portrayal of the daily humiliations and injustices faced by Black South Africans. Cole’s unwavering commitment to revealing the truth led him into exile, and he spent his later years in the United States, where he continued to advocate for human rights through his photography. His life and legacy were recently revisited in the documentary “Ernest Cole: Lost & Found,” which sheds light on his enduring impact on photojournalism and social justice                </p>
+                </p>
+            </div>
+            <div class="col-span-2 grid grid-cols-3 gap-2">
+                <img src="images\ahhnh.jpg" class="w-full rounded-lg shadow-lg fade-in" alt="About Image 1">
+                <img src="images\ahnh.jpg" class="w-full rounded-lg shadow-lg fade-in" alt="About Image 2">
+                <img src="images\hhh.jpg" class="w-full rounded-lg shadow-lg fade-in" alt="About Image 3">
+                <img src="images\hhhnnn.jpg" class="w-full rounded-lg shadow-lg fade-in" alt="About Image 4">
+                <img src="images\hhnn.jpg" class="w-full rounded-lg shadow-lg fade-in" alt="About Image 5">
+                <img src="images\hnnh.jpg" class="w-full rounded-lg shadow-lg fade-in" alt="About Image 6">
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="max-w-6xl mx-auto py-16 px-6 fade-in">
+        <div class="grid grid-cols-3 gap-4">
+            <div class="fade-in">
+                <img src="images\ejjmmbb.jpg" class="w-full rounded-lg shadow-lg hover:scale-105 transition-all duration-300" alt="Portfolio Image">
+            </div>
+            <div class="fade-in">
+                <img src="images\nhhnnh.jpg" class="w-full rounded-lg shadow-lg hover:scale-105 transition-all duration-300" alt="Portfolio Image">
+            </div>
+            <div class="fade-in">
+                <img src="images\hhhnnn.jpg" class="w-full rounded-lg shadow-lg hover:scale-105 transition-all duration-300" alt="Portfolio Image">
+            </div>
+        </div>
+    </section> 
+</section>
+
+<section  class="bg-black text-white">
+    <!-- profile -->
+    <section class="relative w-full h-screen flex items-center justify-center bg-black fade-in">
+        <div class="grid grid-cols-2 gap-2 w-3/4">
+            <img src="images\errr.jpg" class="w-full h-auto rounded-lg shadow-lg fade-in-left" alt="Hero Image Left">
+            <img src="images\errr.jpg" class="w-full h-auto rounded-lg shadow-lg fade-in-right" alt="Hero Image Right">
+        </div>
+        <div class="absolute bottom-10 text-center">
+            <h1 class="text-4xl tracking-wide fade-in">Photographic Narrator</h1><hr>
+        </div>
+    </section>
+
+    <!-- About  -->
+    <section class="max-w-6xl mx-auto py-16 px-6 fade-in">
+        <h2 class="text-2xl  mb-6 fade-in"> Hannah Reyes Morales (Philippines)</h2><hr>
+        <div class="grid grid-cols-3 gap-4">
+            <div class="col-span-1">
+                <p class="text-lg text-white fade-in">
+                    Hannah Reyes Morales is a Filipina photographer whose work delves into themes of resilience and human connections amidst adversity. Growing up in Manila, she witnessed firsthand the challenges faced by marginalized communities. Her experiences inspired her to use photography as a tool to highlight stories of strength and survival. Morales has documented various social issues across Asia, including the impact of conflict, displacement, and systemic inequality. Her empathetic approach allows her to capture intimate moments that reveal the dignity and hope of her subjects. In 2020, she was honored with the Infinity Award for Documentary Practice and Visual Journalism by the International Center of Photography, recognizing her significant contributions to the field.             </div>
+            <div class="col-span-2 grid grid-cols-3 gap-2">
+                <img src="images\eeerr.jpg" class="w-full rounded-lg shadow-lg fade-in" alt="About Image 1">
+                <img src="images\er.jpg" class="w-full rounded-lg shadow-lg fade-in" alt="About Image 2">
+                <img src="images\errer.jpg" class="w-full rounded-lg shadow-lg fade-in" alt="About Image 3">
+                <img src="images\errrnr.jpg" class="w-full rounded-lg shadow-lg fade-in" alt="About Image 4">
+                <img src="images\errrn.jpg" class="w-full rounded-lg shadow-lg fade-in" alt="About Image 5">
+                <img src="images\eeerr.jpg" class="w-full rounded-lg shadow-lg fade-in" alt="About Image 6">
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto py-16 px-6 fade-in">
+        <div class="grid grid-cols-3 gap-4">
+            <div class="fade-in">
+                <img src="images\hanah.jpg" class="w-full rounded-lg shadow-lg hover:scale-105 transition-all duration-300" alt="Portfolio Image">
+            </div>
+            <div class="fade-in">
+                <img src="images\hnhnhaa.jpg" class="w-full rounded-lg shadow-lg hover:scale-105 transition-all duration-300" alt="Portfolio Image">
+            </div>
+            <div class="fade-in">
+                <img src="images\hnnnnnh.jpg" class="w-full rounded-lg shadow-lg hover:scale-105 transition-all duration-300" alt="Portfolio Image">
+            </div>
+        </div>
+    </section> 
+</section>
+
+    <script src="timeline.js"></script>
+</body>
+</html>

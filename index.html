@@ -6,7 +6,8 @@
     <title>LUMORA</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 
     <script>
         tailwind.config = {
@@ -32,10 +33,12 @@
 
         <!-- navliks -->
         <ul class="hidden md:flex space-x-6 text-lg">
-            <li><a href="#hero" class="hover:text-gray-400 transition">Home</a></li>
-            <li><a href="#timeline" class="hover:text-gray-400 transition">Timeline</a></li>
-            <li><a href="#submit" class="hover:text-gray-400 transition">Submit</a></li>
-            <li><a href="#contact" class="hover:text-gray-400 transition">Contact</a></li>
+            <li><a href="index.html" class="hover:text-gray-400 transition">Home</a></li>
+            <li><a href="timeline.html" class="hover:text-gray-400 transition">Timeline</a></li>
+            <li><a href="events.html" class="hover:text-gray-400 transition">Events</a></li>
+            <li><a href="leaderboard.html" class="hover:text-gray-400 transition">Leaderboard</a></li>
+            <li><a href="submit.html" class="hover:text-gray-400 transition">Submit</a></li>
+            <li><a href="contact.html" class="hover:text-gray-400 transition">Contact Us</a></li>
         </ul>
 
         <!-- mobilemenuicon -->
@@ -58,6 +61,141 @@
     </div>
 </section>
 
+<!-- timmeline section -->
+<section id="timeline" class="relative py-16 bg-black text-white">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
+        <!--  Image -->
+        <div class="md:w-1/2 overflow-hidden rounded-lg shadow-lg md:mr-10">
+            <img src="images/nino.jpg" alt="Gallery Image 1" class="w-full object-cover">
+        </div>
+
+        <!-- Text -->
+        <div class="md:w-1/2 opacity-0 transform translate-y-10" id="gallery-text">
+            <h2 class="text-5xl font-bold mb-4">Timeline</h2><hr>
+            <p class="text-lg text-gray-400 mb-6">
+                In today’s world, visual storytelling is crucial. Our photography timeline is a curated selection of stunning visuals from around the globe and stories that are explained in ways that words cannot capture. Get a chance to see and hear from the makers themselves and gain insight into what led them down their paths.
+            </p>
+            <a href="timeline.html" class="px-6 py-3 bg-white text-black rounded-lg shadow-lg hover:bg-gray-300 transition">
+                Explore Timeline
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Submit Story  -->
+<section id="submit" class="relative py-16 bg-black text-white">
+    <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-5xl mb-6">Submit Your Story</h2><hr>
+        <p class="text-lg text-white mb-8">
+            Share your journey, your inspirations, and your work with the world. Submit your photography and let your story be heard.
+        </p>
+
+        <form action="#" method="POST" class="bg-white p-8 rounded-lg shadow-lg">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label for="name" class="block text-black text-lg mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" class="w-full px-4 py-3 bg-white text-white border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500">
+                </div>
+
+                <div>
+                    <label for="email" class="block text-black text-lg mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" class="w-full px-4 py-3 bg-white text-white border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500">
+                </div>
+            </div>
+
+            <div class="mt-6">
+                <label for="story" class="block text-black text-lg mb-2">Your Story</label>
+                <textarea id="story" name="story" rows="5" class="w-full px-4 py-3 white text-white border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500"></textarea>
+            </div>
+
+            <div class="mt-6">
+                <label for="photo" class="block text-black text-lg mb-2">Upload Portfolio</label>
+                <input type="file" id="photo" name="photo" class="w-full px-4 py-3 bg-white text-white border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500">
+            </div>
+
+            <button type="submit" class="mt-6 px-6 py-3 bg-black text-white rounded-lg shadow-lg hover:bg-gray-900 transition">
+                Submit 
+            </button>
+        </form>
+    </div>
+</section>
+
+<section id="footer">
+<footer class="bg-black text-white py-12">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="mb-10 text-center">
+        <h3 class="text-2xl  tracking-wide ">Lumora Memoria</h3><hr>
+        <p class="text-lg text-white mt-4 leading-relaxed">
+          Discover the world through the eyes of visionary photographers.  
+          Explore compelling stories and powerful imagery from every corner of the globe.
+        </p>
+      </div>
+  
+      <!-- Navlinks -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left">
+        <div>
+          <h4 class="text-l mb-3">Explore</h4>
+          <ul class="space-y-2">
+            <li><a href="#home" class="hover:text-gray-400">Home</a></li>
+            <li><a href="#timeline" class="hover:text-gray-400"> Timeline</a></li>
+            <li><a href="#submit" class="hover:text-gray-400">Submit </a></li>
+            <li><a href="#contact" class="hover:text-gray-400">Contact </a></li>
+
+          </ul>
+        </div>
+  
+        <div>
+          <h4 class="text-l mb-3">Resources</h4>
+          <ul class="space-y-2">
+            <li><a href="#submit" class="hover:text-gray-400">Submit Your Story</a></li>
+            <li><a href="#journal" class="hover:text-gray-400">Photography Journal</a></li>
+            <li><a href="events.html" class="hover:text-gray-400">Events & Exhibitions</a></li>
+          </ul>
+        </div>
+  
+        <div>
+          <h4 class="text-l mb-3">Legal</h4>
+          <ul class="space-y-2">
+            <li><a href="#privacy-policy" class="hover:text-gray-400">Privacy Policy</a></li>
+            <li><a href="#terms" class="hover:text-gray-400">Terms & Conditions</a></li>
+            <li><a href="#credits" class="hover:text-gray-400">Credits</a></li>
+          </ul>
+        </div>
+  
+        <!--info -->
+        <div class="text-center md:text-left">
+          <h4 class="text-lg mb-3">Contact</h4>
+          <p class="text-gray-400">📧 <a href="mailto:contact@throughthelens.com" class="hover:text-gray-400">info@lumora.com</a></p>
+          <p class="text-gray-400">📞 <a href="tel:+1234567890" class="hover:text-gray-400">+254 706 298 128</a></p>
+  
+          <div class="flex justify-center md:justify-start space-x-4 mt-4">
+            <a href="#" class="text-white hover:text-blue-900 text-2xl"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-white hover:text-sky-300 text-2xl"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white hover:text-pink-500 text-2xl"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white hover:text-sky-600 text-2xl"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="text-white hover:text-purple-900 text-2xl"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+  
+      
+      <div class="text-center my-10">
+        <a href="timeline.html" class="bg-white text-black  py-3 px-8 rounded-lg shadow-lg hover:bg-gray-300 transition">
+          Explore the Timeline
+        </a>
+      </div>
+  
+      <div class="text-center text-gray-500 text-sm">
+        <p>&copy; 2025 Lumora Memoria. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+</section>
+  
+  
     <script src="script.js"></script>
 </body>
 </html>
