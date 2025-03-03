@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LUMORA | Events</title>
+    <title>LUMORA</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
-
     <script>
         tailwind.config = {
             theme: {
@@ -20,31 +20,17 @@
             },
         };
     </script>
-    <style>
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeIn 2s ease-out forwards;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
 </head>
 <body class="bg-black text-white font-berkshire">
-    <!-- Navbar -->
-    <nav class="fixed top-0 w-full flex justify-between items-center px-8 py-4 bg-black bg-opacity-50 text-white shadow-lg z-50">
+    <!-- navbar -->
+    <nav class="fixed top-0 w-full flex justify-between items-center px-8 py-4 bg-black  text-white shadow-lg z-50">
         <div class="flex items-center space-x-3">
             <img src="images/Gold_Luxury_Initial_Logo-removebg-preview.png" alt="Lumora Logo" class="h-16 w-auto">
             <span class="text-2xl font-berkshire">Lumora</span>
         </div>
+
+        <!-- navlinks -->
         <ul class="hidden md:flex space-x-6 text-lg">
             <li><a href="index.html" class="hover:text-gray-400 transition">Home</a></li>
             <li><a href="timeline.html" class="hover:text-gray-400 transition">Timeline</a></li>
@@ -53,51 +39,46 @@
             <li><a href="submit.html" class="hover:text-gray-400 transition">Submit</a></li>
             <li><a href="contact.html" class="hover:text-gray-400 transition">Contact Us</a></li>
         </ul>
+
+        <!-- mobile menu icon -->
         <button id="menuToggle" class="md:hidden text-white text-3xl">&#9776;</button>
     </nav>
 
-    <!-- Events Section -->
-    <div class="container mx-auto py-24 px-6 text-center">
-        <h1 class="text-5xl font-bold mb-5 tracking-wide fade-in">Upcoming Events</h1>
-        <hr class="border-gray-700 mb-10">
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
-            <div class="bg-black p-6 rounded-xl shadow-lg border border-gray-700 hover:scale-105 transition transform duration-300 w-80 fade-in">
-                <img src="images/conttest.png" alt="Photography Contest" class="w-full h-48 object-cover rounded-md mb-4">
-                <h2 class="text-3xl font-semibold mb-2">Photography Contest</h2>
-                <p class="text-gray-400 text-sm mb-4">March 15, 2025 | Nairobi, Kenya</p>
-                <p class="mb-6">Join top photographers in an interactive session covering composition, lighting, and storytelling.</p>
-                <button data-event="Photography Contest" class="get-ticket-btn w-full bg-white text-black py-2 rounded-lg font-bold hover:bg-gray-300 transition">Get Ticket</button>
-            </div>
-            
-            <div class="bg-black p-6 rounded-xl shadow-lg border border-gray-700 hover:scale-105 transition transform duration-300 w-80 fade-in">
-                <img src="images/flyer.png" alt="Street Photography Walk" class="w-full h-48 object-cover rounded-md mb-4">
-                <h2 class="text-3xl font-semibold mb-2">Street Photography Walk</h2>
-                <p class="text-gray-400 text-sm mb-4">April 5, 2025 | Lagos, Nigeria</p>
-                <p class="mb-6">Explore urban landscapes with a group of passionate photographers.</p>
-                <button data-event="Street Photography Walk" class="get-ticket-btn w-full bg-white text-black py-2 rounded-lg font-bold hover:bg-gray-300 transition">Get Ticket</button>
-            </div>
-            
-            <div class="bg-black p-6 rounded-xl shadow-lg border border-gray-700 hover:scale-105 transition transform duration-300 w-80 fade-in">
-                <img src="images/Screenshot 2025-02-25 214457.png" alt="Night Sky Photography" class="w-full h-48 object-cover rounded-md mb-4">
-                <h2 class="text-3xl font-semibold mb-2">Night Sky Photography</h2>
-                <p class="text-gray-400 text-sm mb-4">May 20, 2025 | Cape Town, South Africa</p>
-                <p class="mb-6">Capture breathtaking shots of the night sky with expert guidance.</p>
-                <button data-event="Night Sky Photography" class="get-ticket-btn w-full bg-white text-black py-2 rounded-lg font-bold hover:bg-gray-300 transition">Get Ticket</button>
+    <!-- Contact Form Section -->
+    <section class="bg-black text-white min-h-screen flex items-center justify-center">
+        <div class="container mx-auto px-6 py-12 text-center">
+            <h1 class="text-5xl font-bold mt-20 mb-5">Contact Us</h1>
+            <hr>
+            <p class="text-lg text-white mt-10 mb-6">
+                We’d love to hear from you! Reach out with any questions, collaborations, or inquiries.
+            </p>
+
+            <div class="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-lg border border-gray-700">
+                <form id="contactForm" class="space-y-6">
+                    <div>
+                        <label class="block text-lg text-black">Full Name</label>
+                        <input type="text" name="name" id="name" class="w-full p-3 text-black border border-black rounded-md" placeholder="Your Name" required>
+                    </div>
+                    <div>
+                        <label class="block text-lg text-black mb-2">Email Address</label>
+                        <input type="email" id="email" name="email" class="w-full p-3 text-black border border-black rounded-md" placeholder="Your Email" required>
+                    </div>
+                    <div>
+                        <label class="block text-lg text-black mb-2">Message</label>
+                        <textarea name="message" class="w-full p-3 text-black border border-black rounded-md" id="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-black text-white py-3 border border-black rounded-lg font-bold hover:bg-gray-900 transition">Send Message</button>
+                </form>
+
+                <div class="mt-10 text-lg text-black">
+                    <p>Email: <a href="mailto:wahome@nisria.co" class="text-black hover:text-sky-900">lummora@info.com</a></p>
+                    <p>Phone: <a href="tel:+254706298128" class="text-black hover:text-sky-900">+254706298128</a></p>
+                    <p>Location: Nairobi, Kenya</p>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Ticket Form -->
-    <div class="max-w-md mx-auto p-6 bg-gray-900 rounded-lg mt-12">
-        <form id="ticket-form">
-            <input type="hidden" name="event_name">
-            <input type="text" name="user_name" placeholder="Your Name" required class="block w-full p-2 rounded mb-3 bg-gray-800 text-white" />
-            <input type="email" name="user_email" placeholder="Your Email" required class="block w-full p-2 rounded mb-3 bg-gray-800 text-white" />
-            <input type="number" name="ticket_count" placeholder="Number of Tickets" required class="block w-full p-2 rounded mb-3 bg-gray-800 text-white" />
-            <button type="submit" class="w-full bg-white text-black py-2 rounded-lg font-bold hover:bg-gray-300 transition">Purchase Ticket</button>
-        </form>
-    </div>
-
-    <script src="events.js"></script>
+    <script src="contact.js"></script>
 </body>
 </html>
